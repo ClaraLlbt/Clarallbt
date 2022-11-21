@@ -1,0 +1,1 @@
+import{_ as e,H as o,r as t,o as c,c as a,a as s}from"./index.09ac91c0.js";const r={name:"contact",components:{HdrBanner:o}},_={id:"contact",class:"contact"};function d(p,i,m,f,l,B){const n=t("HdrBanner");return c(),a("div",_,[s(n)])}const H=e(r,[["render",d]]);export{H as default};
