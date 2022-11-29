@@ -3,7 +3,7 @@
 
         <div class="row presentation">
 
-            <div class="col-11 col-md-6" id="skills">
+            <div class="col-11 col-md-12 col-lg-6" id="skills">
                 <div class="row development bloc-1">
                     <div class="col-md-3 code-icon icon-1">
                         <i id="icon1-color" class="bi bi-code"></i>
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="col-11 col-md-4 about-blc">
+            <div class="col-11 col-md-12 col-lg-4 about-blc">
                 <div class="bckgrd-color"></div>
                 <div class="p">
                     <p>Je viens d'obtenir mon diplôme. Je suis à la recherche d'une expérience professionnelle riche et motivante.
@@ -96,14 +96,18 @@ export default {
 <style lang="scss" scoped>
 
 #about{
-  padding-top: 100px;
-  @media (max-width: 767px) {
-    padding-top: 20px;
+  padding-top: 150px;
+  @media (min-width: 300px) and (max-width: 1025px) {
+    padding-top: 50px;
   }
   .presentation{
     margin: auto;
     align-items: center;
     justify-content: center;
+    @media (min-width: 300px) and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
     #skills{
       overflow: hidden;
       margin: auto;
@@ -187,6 +191,9 @@ export default {
       border-radius: 15px;
       margin: auto;
       background: white;
+      @media (max-width: 1024px){
+          margin-bottom: 50px;
+        }
       .bckgrd-color{
         height: 100%;
         position: absolute;
@@ -196,7 +203,7 @@ export default {
         z-index: -1;
         top: 20px;          
         left: 25px;
-        @media (max-width: 425px){
+        @media (max-width: 1024px){
           top: -6px;              
           left: 0;
         }

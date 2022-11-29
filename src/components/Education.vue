@@ -8,7 +8,7 @@
         <div class="row dl-cv">
           <h3 class="col-12 col-md-4 title">Mes diplômes</h3> 
           <div class="col-12 col-md-6 btn-dl-cv">
-            <a href="/p-liberty/lib/web/CV_HAULTCOEUR_CLARA.pdf" download>                  
+            <a href="/ClaraLaliberT/lib/web/CV_LALIBERTE_CLARA.pdf" download>                  
               <button type="button" class="btn btn-light"><i class="bi bi-file-pdf"></i> Télécharger mon CV</button>
             </a>
           </div>

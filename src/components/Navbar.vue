@@ -25,7 +25,7 @@
       <!--Design Menu Contact Page-->
       <div class="menu-contact">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-          <li class="nav-item toshow"><a class="home" href=""><router-link to="/"><i class="bi bi-house-door-fill light"></i></router-link></a></li>
+          <li class="nav-item toshow"><a class="home" href="/"><router-link to="/"><i class="bi bi-house-door-fill light"></i></router-link></a></li>
         </ul>
       </div>
     </nav>

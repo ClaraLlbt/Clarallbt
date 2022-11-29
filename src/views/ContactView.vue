@@ -8,22 +8,22 @@
                 <h2>Contactez-moi !</h2>
                 <span class="span-1">Vous souhaitez discuter de mes motivations ? Je vous invite à me contacter. Vous pouvez télécharger mon cv ou utiliser le formulaire.</span>
                 <div class="col-12 btn-dl-cv">
-                    <a href="/ClaraLaliberT/lib/web/CV_HAULTCOEUR_CLARA.pdf" download="">
+                    <a href="/ClaraLaliberT/lib/web/CV_LALIBERTE_CLARA.pdf" download="">
                         <button type="button" class="btn btn-light"><i class="bi bi-file-pdf"></i> Télécharger mon CV</button>
                     </a>
                 </div>
                 <span class="span-2">A Bientôt !</span>
             </div>
             <div class="col-12 col-md-6 form">
-                <form id="form" action="">
+                <form id="form" method="POST">
                     <h3>Formulaire de contact</h3>
                     <div>
                         <label for="reply_to" class="form-label">Email:</label>
-                        <input  v-model="email" type="email" class="form-control" id="reply_to" name="reply_to" placeholder="Laissez moi votre Email" aria-describedby="emailHelp">
+                        <input  v-model="email" type="email" class="form-control" id="reply_to" name="reply_to" placeholder="Laissez moi votre Email" aria-describedby="emailHelp" required>
                     </div>
                     <div>
                         <label for="message" class="form-label">Votre message:</label>
-                        <textarea v-model="message" class="form-control" id="message" name="message" rows="3" placeholder="Je serais ravie de prendre contact avec vous..."></textarea>
+                        <textarea v-model="message" class="form-control" id="message" name="message" rows="3" placeholder="Je serais ravie de prendre contact avec vous..." required></textarea>
                     </div>
                     <div class="button" >
                         <button id="sendBtn" @click="sendEmail()" type="submit" value="Send Email" class="btn btn-light">Envoyer</button>
@@ -33,6 +33,7 @@
         </div>
 
     </div>
+    
     <FooterVue />
 </template>
 
@@ -65,6 +66,8 @@ import FooterVue from '../components/Footer.vue';
             },
             sendEmail() {
                 const btn = document.querySelector('#sendBtn');
+                const messArea = document.querySelector('#message');
+                const emailArea = document.querySelector('#reply_to');
                 const form = document.getElementById('form').addEventListener('submit', function(event) {
                     event.preventDefault();
                     
@@ -76,12 +79,14 @@ import FooterVue from '../components/Footer.vue';
                     emailjs.sendForm(serviceID, templateID, this ,userId, {
                         email: this.email,
                         message: this.message
-                    }) .then(() => {
+                    }) .then((res) => {
                         btn.innerText = 'Email Envoyé';
-                        window.location.reload()
-                    }, (err) => {
+                        document.location.href = "/ClaraLaliberT/";
+                    
+                    }) 
+                    .catch ((err) => {
                         btn.innerText = 'Une erreur est survenue';
-                    });
+                    })
                 });  
             }
         }

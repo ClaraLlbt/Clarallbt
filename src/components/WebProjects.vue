@@ -17,29 +17,65 @@
 
             <main id="carousel" class="container">
               <div class="item">
-                <img src="../assets/images/javascript.png" alt="">
+                <img src="../assets/images/htmlcss.png" alt="">
                 <div class="paraph"><p>Transformer une maquette en site Web avec HTML5 et CSS3</p></div>
+                <div class="bckgrd-hover"></div>
+                <div class="show-item-link">
+                  <a class="link-to-project" href="https://clarallbt.github.io/HaultcoeurClara-2-02112020/">
+                    <p>Découvrir</p>
+                    <i class="bi bi-link"></i></a>
+                </div>
 
               </div>
               <div class="item">
-                <img src="../assets/images/javascript.png" alt="">
+                <img src="../assets/images/NodeExpressJS.png" alt="">
                 <div class="paraph"><p>Construire une API sécurisée pour une application</p></div>
+                <div class="bckgrd-hover"></div>
+                <div class="show-item-link">
+                  <a class="link-to-project" href="https://clarallbt.github.io/PIIQUANTE/">
+                    <p>Découvrir</p>
+                    <i class="bi bi-link"></i></a>
+                </div>
               </div>
               <div class="item">
-                <img src="../assets/images/javascript.png" alt="">
+                <img src="../assets/images/vuejs-image.jpg" alt="">
                 <div class="paraph"><p>Construire un réseau social d'Entreprise avec Vue.JS et MySQL</p></div>
+                <div class="bckgrd-hover"></div>
+                <div class="show-item-link">
+                  <a class="link-to-project" href="https://clarallbt.github.io/GrpMVP2.0/">
+                    <p>Découvrir</p>
+                    <i class="bi bi-link"></i></a>
+                </div>
               </div>
               <div class="item">
                 <img src="../assets/images/javascript.png" alt="">
                 <div class="paraph"><p>Construire un site web E-commerce</p></div>
+                <div class="bckgrd-hover"></div>
+                <div class="show-item-link">
+                  <a class="link-to-project" href="https://clarallbt.github.io/Orinoco/">
+                    <p>Découvrir</p>
+                    <i class="bi bi-link"></i></a>
+                </div>
               </div>
               <div class="item">
-                <img src="../assets/images/javascript.png" alt="">
+                <img src="../assets/images/seo.png" alt="">
                 <div class="paraph"><p>Référencement naturel d'un site web existant</p></div>
+                <div class="bckgrd-hover"></div>
+                <div class="show-item-link">
+                  <a class="link-to-project" href="https://clarallbt.github.io/LaChouetteAgence/">
+                    <p>Découvrir</p>
+                    <i class="bi bi-link"></i></a>
+                </div>
               </div>
               <div class="item">
-                <img src="../assets/images/javascript.png" alt="">
+                <img src="../assets/images/html.webp" alt="">
                 <div class="paraph"><p>Dynamiser une page web avec des animations CSS</p></div>
+                <div class="bckgrd-hover"></div>
+                <div class="show-item-link">
+                  <a class="link-to-project" href="https://clarallbt.github.io/HaultcoeurClara-3-28022020/">
+                    <p>Découvrir</p>
+                    <i class="bi bi-link"></i></a>
+                </div>
               </div>
             </main>
           </div>         
@@ -145,6 +181,44 @@ export default {
     width: 300px;
     opacity: 80%;
     background: linear-gradient(184deg, #24a4ea, #379deb 45%, #9D01AD);
+    .show-item-link, .bckgrd-hover{ display: none; }
+    &:hover, &:active{
+      height: 290px;
+      width: 320px;
+      z-index: 10;
+      img, .paraph{ display: none;}
+      .bckgrd-hover{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        background: black;
+        opacity: 30%;
+        }
+        .show-item-link{
+          display: block;
+          place-self: center;
+          background: white;
+          border-radius: 50%;
+          padding: 20px;
+          display: grid;
+          align-content: center;
+          a.link-to-project{
+            p{
+              font-size: 25px;
+              margin: 0;
+            }
+            i{ font-size: 40px;}
+            &:hover{
+              background-color: #AFDCF8;
+              color: #AF6EEF;
+              border-radius: 100%;
+              padding: 25px;
+            }
+          }
+        }
+      }
     img{
       width: 50%;
       justify-self: center;
