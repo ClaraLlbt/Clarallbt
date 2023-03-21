@@ -18,7 +18,7 @@ const router = createRouter({
       component: () => import("../views/ContactView.vue"),
     },
   ],
-  base: 'https://clarahlt.github.io/ClaraLaliberT/' 
+  base: 'https://clarallbt.github.io/ClaraLaliberT/' 
 });
 
 export default router;

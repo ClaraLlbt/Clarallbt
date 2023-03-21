@@ -8,12 +8,12 @@
 
           <div id="portfolio" class="container carousel-container">
 
-            <button type="button" name="position" class="cbp_tmicon btn"></button>
-            <button type="button" name="position" class="cbp_tmicon btn"></button>
-            <button type="button" name="position" class="cbp_tmicon btn" checked></button>
-            <button type="button" name="position" class="cbp_tmicon btn"></button>
-            <button type="button" name="position" class="cbp_tmicon btn"></button>
-            <button type="button" name="position" class="cbp_tmicon btn"></button>
+            <button type="button" name="position"  aria-label="carousel button" class="cbp_tmicon btn"></button>
+            <button type="button" name="position"  aria-label="carousel button"  class="cbp_tmicon btn"></button>
+            <button type="button" name="position"  aria-label="carousel button"  class="cbp_tmicon btn" checked></button>
+            <button type="button" name="position"  aria-label="carousel button"  class="cbp_tmicon btn"></button>
+            <button type="button" name="position"  aria-label="carousel button"  class="cbp_tmicon btn"></button>
+            <button type="button" name="position"  aria-label="carousel button"  class="cbp_tmicon btn"></button>
 
             <main id="carousel" class="container">
               <div class="item">
@@ -168,7 +168,7 @@ export default {
   --middle: 4;
   --position: 3;
   @media (max-width: 667px) {
-    overflow: overlay;
+    overflow: auto;
   }
   div.item {
     height: 280px;

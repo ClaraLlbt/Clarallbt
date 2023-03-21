@@ -1,14 +1,14 @@
 <template>
     <nav id="navbar" class="header container-fluid navbar navbar-expand-lg">
-      <a class="name navbar-brand"><router-link to="/">Clara Laliberté</router-link></a>
+      <router-link to="/" class="name navbar-brand">Clara Laliberté</router-link>
 
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <button name="navbar button" aria-label="navbar button"  class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       
     <div class="offcanvas offcanvas-end col col-md-" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" name="close button"></button>
       </div>
       
       <div class="offcanvas-body">
@@ -17,7 +17,7 @@
           <li class="nav-item tohide"><a href="#about" class="link about">A propos</a></li>
           <li class="nav-item tohide"><a href="#education" class="link education">Parcours</a></li>
           <li class="nav-item tohide"><a href="#portfolio" class="link portfolio">Portfolio</a></li>
-          <li class="nav-item tohide"><a class="link contact"><router-link to="/contact/">Contact</router-link></a></li>
+          <li class="nav-item tohide"><router-link to="/contact/">Contact</router-link></li>
         </ul>
       </div>
     </div>

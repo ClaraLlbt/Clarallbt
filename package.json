@@ -1,7 +1,7 @@
 {
   "name": "laliberty",
   "version": "0.0.0",
-  "homepage": "https://clarahlt.github.io/ClaraLaliberT/",
+  "homepage": "https://clarallbt.github.io/ClaraLaliberT/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

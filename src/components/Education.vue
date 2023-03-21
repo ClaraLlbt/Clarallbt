@@ -21,7 +21,7 @@
 			        </time>
 			        <div class="cbp_tmicon icon-1"></div>
 			        <div class="cbp_tmlabel label-1">
-				        <h2>Dévloppeur Web</h2>
+				        <h3>Dévloppeur Web</h3>
 				        <p>Création Backend/Frontend; création et gestion de bases de données</p>
 			        </div>  
 		        </li>
@@ -32,7 +32,7 @@
 			        </time>
 			        <div class="cbp_tmicon icon-2"></div>
 			        <div class="cbp_tmlabel label-2">
-				        <h2>Formation BCMM</h2>
+				        <h3>Formation BCMM</h3>
 				        <p>Formation en Bureautique, Communication et Multimédias - en alternance chez Casteleyn/Régiopack</p>
 			        </div>  
 		        </li>
@@ -43,7 +43,7 @@
 			      </time>
 			      <div class="cbp_tmicon icon-3"></div>
 			      <div class="cbp_tmlabel label-3">
-				      <h2>DAEU (scientifiques)</h2>
+				      <h3>DAEU (scientifiques)</h3>
 				      <p>Diplôme d'accès aux études universitaire - Equivalence Bac</p>
 			      </div>  
 		      </li>
@@ -108,6 +108,7 @@ export default {
           align-self: flex-end;
           .dl-cv{
             margin: 20px;
+            .title{ color: #215B7D; }
             .btn-dl-cv{
               text-align: end;
             }
@@ -168,17 +169,17 @@ export default {
             }
             .cbp_tmtimeline > li .cbp_tmtime span:first-child {
               font-size: 0.9em;
-              color: #3594cb;
+              color: #215B7D;
             }
             .cbp_tmtimeline > li .cbp_tmtime span:last-child {
 	            font-size: 2.9em;
-	            color: #3594cb;
+	            color: #215B7D;
             }
 
             /* Right content */
             .cbp_tmtimeline > li .cbp_tmlabel {
               margin: 0 0 15px 25%;
-              background: #3594cb;
+              background: #215B7D;
               color: #fff;
               padding: 10px;
               font-size: 1.2em;
@@ -201,7 +202,7 @@ export default {
               width: 0;
               position: absolute;
               pointer-events: none;
-              border-right-color: #3594cb;
+              border-right-color: #215B7D;
               border-width: 10px;
               top: 10px;
             }
@@ -257,12 +258,12 @@ export default {
 		          right: auto;
 		          left: 20px;
 		          border-right-color: transparent;
-		          border-bottom-color: #3594cb;
+		          border-bottom-color: #215B7D;
 		          top: -20px;
 	          }
           	.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
 		          border-right-color: transparent;
-		          border-bottom-color: #6cbfee;
+		          border-bottom-color: #215B7D;
           	}
             .cbp_tmtimeline > li .cbp_tmicon {
 		          position: relative;
@@ -275,16 +276,3 @@ export default {
       }    
   }
 </style>
-
-<!-- 
-.card-1{
-  transform: translateX(-92%);
-  z-index: -1;
-  opacity: 1;
-  transition: transform 2s ease-in-out,
-  opacity 0.6s ease-in-out;
-}
-// .bloc-1.active{
-//     transform: translateX(0%);
-//     opacity: 1;
-// } -->

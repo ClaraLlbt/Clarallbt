@@ -9,17 +9,17 @@
                         <i id="icon1-color" class="bi bi-code"></i>
                     </div>
                     <div class="col-md-9 dev-skills" data-mdb-animation-on-scroll="repeat">
-                        <h4 id="icon1-color">Développement</h4>
+                        <h3 id="icon1-color">Développement</h3>
                         <div class="row">
                             <div class="col-6">
-                                <h5>Backend</h5>
+                                <h4>Backend</h4>
                                 <p>SQL</p>
                                 <p>SEO</p>
                                 <p>API REST</p>
                                 <p>ExpressJS</p>
                             </div>
                             <div class="col-6">
-                                <h5>Frontend</h5>
+                                <h4>Frontend</h4>
                                 <p>HTML/CSS/Bootstrap/Sass</p>
                                 <p>NodeJS</p>
                             <p>Javascript</p>
@@ -30,7 +30,7 @@
                 </div> 
                 <div class="row development bloc-2">
                     <div class="col-md-9 dev-skills">
-                        <h4 id="icon2-color">Design</h4>
+                        <h3 id="icon2-color">Design</h3>
                         <p>Clip Studio Paint</p>
                         <p>Adobe Illustrator/Indesign/Photoshop</p>
                      </div>
@@ -96,7 +96,7 @@ export default {
 <style lang="scss" scoped>
 
 #about{
-  padding-top: 150px;
+  padding-top: 100px;
   @media (min-width: 300px) and (max-width: 1025px) {
     padding-top: 50px;
   }

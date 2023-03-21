@@ -2,8 +2,8 @@
     <footer id="footer" class="container-fluid">
         <div class="row networks-icons"> 
             <div class="col-md-2 icons">
-                <div class="col-md-2 linked"><a href="https://www.linkedin.com/in/chltc/"><i class="bi bi-linkedin"></i></a></div>
-                <div class="col-md-2 instagram"><a href="https://www.instagram.com/kala__ikebana/"><i class="bi bi-instagram"></i></a></div>
+                <div class="col-md-2 linked"><a href="https://www.linkedin.com/in/chltc/" aria-label="Learn more about me on my LinkedIn profile"><i class="bi bi-linkedin"></i></a></div>
+                <div class="col-md-2 instagram"><a href="https://www.instagram.com/kala__ikebana/" aria-label="Learn more about me on my Instagram profile"><i class="bi bi-instagram"></i></a></div>
             </div> 
         </div>
         <div class="row copyright">

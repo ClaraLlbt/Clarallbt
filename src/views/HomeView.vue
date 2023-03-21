@@ -8,7 +8,7 @@
     <div class="row home-title">
       <h1 id="animate_text" class="">Développeur web Junior</h1>
 
-      <a href="#about" class="HS-link">Découvrir qui je suis ...</a>
+      <h2><a href="#about" class="HS-link">Découvrir qui je suis ...</a></h2>
     </div>
   </div>
 
