@@ -3,9 +3,11 @@
   <div id="home" class="home">
     <!--Navbar + Header Banner-->
     <NavbarVue />
-    <HdrBannerVue />
+
+    <Banner />
 
     <div class="row home-title">
+      <img class="profil-pic" src="../assets/images/photo.svg" alt="">
       <h1 id="animate_text" class="">Développeur web Junior</h1>
 
       <h2><a href="#about" class="HS-link">Découvrir qui je suis ...</a></h2>
@@ -29,9 +31,10 @@ import HdrBannerVue from '../components/HdrBanner.vue';
 import EducationVue from '../components/Education.vue';
 import WebProjectsVue from '../components/WebProjects.vue'
 import FooterVue from '../components/Footer.vue';
+import Banner from '../components/Banner.vue'
   export default {
     name: 'home',
-    components: { NavbarVue, HdrBannerVue, About, FooterVue, EducationVue, WebProjectsVue },
+    components: { NavbarVue, HdrBannerVue, About, FooterVue, EducationVue, WebProjectsVue, Banner },
     mounted(){
       this.animateTxt(),
       this.showTxt()
@@ -66,15 +69,24 @@ import FooterVue from '../components/Footer.vue';
 <style lang="scss" scoped>
 #home{
   .home-title{
+    display: flex;
+    justify-content: center;
     position: absolute;
     height: 100%;
+    width: 100%;
     top: 0;
-    left: 5%;
     color: white;
     align-content: space-evenly;
-    h1{ font-size: 60px }
+    .profil-pic{ 
+      width: 100%;
+      height: 32%;
+    }
+    h1{ 
+      font-size: 60px;
+      text-align: center;
+     }
+     h2{ text-align: center;}
     a{
-      left: 10%;
       font-size: 35px;
       max-width: max-content;
       opacity: 0;

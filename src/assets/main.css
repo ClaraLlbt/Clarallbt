@@ -12,7 +12,7 @@ a,
   transition: 0.4s;
 }
 a:hover{
-  background-color: #C0E2F9;
+  background-color: #7BB8F6;
     color: #AF6EEF;
     border-radius: 25px;
     padding: 5px;
@@ -20,7 +20,7 @@ a:hover{
 
 @media (hover: hover) {
   a:hover {
-    background-color: #C0E2F9;
+    background-color: #7BB8F6;
     color: #AF6EEF;
     border-radius: 25px;
     padding: 5px;
