@@ -45,7 +45,7 @@
       top: 0px;
       left: 0px;
       right: 0px;
-      padding: 10px 20px;
+      padding: 0px 20px;
       background: linear-gradient(
          100deg,
          rgba(36, 164, 234, 0),
@@ -97,7 +97,7 @@
          float: right;
       }
       &.bg {
-         background: linear-gradient(100deg, #24a4ea, #379deb 25%, #b76bf0);
+         background: #2C0437;
       }
 
       .menu-contact{

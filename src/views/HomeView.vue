@@ -27,14 +27,13 @@
 <script>
 import NavbarVue from '../components/Navbar.vue';
 import About from '../components/About.vue';
-import HdrBannerVue from '../components/HdrBanner.vue';
 import EducationVue from '../components/Education.vue';
 import WebProjectsVue from '../components/WebProjects.vue'
 import FooterVue from '../components/Footer.vue';
 import Banner from '../components/Banner.vue'
   export default {
     name: 'home',
-    components: { NavbarVue, HdrBannerVue, About, FooterVue, EducationVue, WebProjectsVue, Banner },
+    components: { NavbarVue, Banner ,About, FooterVue, EducationVue, WebProjectsVue },
     mounted(){
       this.animateTxt(),
       this.showTxt()
