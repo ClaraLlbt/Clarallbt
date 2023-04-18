@@ -51,8 +51,8 @@
 
 <style lang="scss" scoped>
 footer{
-    background: #AF6EEF;
-    color:darkslategrey;
+    background: #73195D;
+    color:white;
     .row.networks-icons{
         justify-content: center;
         overflow: hidden;
@@ -85,7 +85,7 @@ footer{
         p{
             padding: 10px;
             text-align: center;
-            border-top: 1px solid darkslategrey;
+            border-top: 1px solid #D17C72;
         }
     }
 

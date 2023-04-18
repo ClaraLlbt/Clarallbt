@@ -8,11 +8,11 @@
 a,
 .green {
   text-decoration: none;
-  color: #485665;
+  color: white;
   transition: 0.4s;
 }
-a:hover{
-  background-color: #C0E2F9;
+/* a:hover{
+  background-color: #4653E6;
     color: #AF6EEF;
     border-radius: 25px;
     padding: 5px;
@@ -20,12 +20,12 @@ a:hover{
 
 @media (hover: hover) {
   a:hover {
-    background-color: #C0E2F9;
+    background-color: #778DFB;
     color: #AF6EEF;
     border-radius: 25px;
     padding: 5px;
   }
-}
+} */
 
 @media (max-width: 2000px){
   body { 
