@@ -60,5 +60,4 @@ import Banner from '../components/Banner.vue'
 </script>
 
 <style lang="scss" scoped>
-
 </style>
