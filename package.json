@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@vueuse/core": "^10.0.2",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.2",
     "emailjs-com": "^3.2.0",

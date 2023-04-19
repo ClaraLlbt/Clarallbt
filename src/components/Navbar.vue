@@ -1,130 +1,125 @@
 <template>
-  <nav id="navbar" class="header container-fluid navbar navbar-expand-lg">
-    <router-link to="/" class="name navbar-brand">Clara Laliberté</router-link>
-
-    <button name="navbar button" aria-label="navbar button"  class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-  <div class="offcanvas offcanvas-end col col-md-" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" name="close button"></button>
-    </div>
-    
-    <div class="offcanvas-body">
-    <div class="menu">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-        <li class="nav-item tohide"><a href="#about" class="link about">A propos</a></li>
-        <li class="nav-item tohide"><a href="#education" class="link education">Parcours</a></li>
-        <li class="nav-item tohide"><a href="#portfolio" class="link portfolio">Portfolio</a></li>
-        <li class="nav-item tohide"><router-link to="/contact/">Contact</router-link></li>
-      </ul>
-    </div>
-  </div>
-  </div>
-    <!--Design Menu Contact Page-->
-    <div class="menu-contact">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-        <li class="nav-item toshow"><a class="home" href="/"><router-link to="/"><i class="bi bi-house-door-fill light"></i></router-link></a></li>
-      </ul>
-    </div>
+  <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Clara Laliberté</a>
+        
+        <div class="" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link link-home" href="#">A propos
+                        <div class="border-effect"></div>
+                    </a>
+                    <!-- <a class="nav-link icon-home" href="#"><i class="bi bi-house-door-fill"></i>
+                        <div class="border-effect"></div>
+                    </a> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-services" href="#services">Parcours
+                        <div class="border-effect"></div>
+                    </a>
+                    <!-- <a class="nav-link icon-services" href="#services"><i class="bi bi-gear-wide-connected"></i>
+                        <div class="border-effect"></div>
+                    </a> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-contact" href="#contact">Portfolio
+                        <div class="border-effect"></div>
+                    </a>
+                    <!-- <a class="nav-link icon-contact" href="#contact"><i class="bi bi-envelope-at"></i>
+                        <div class="border-effect"></div>
+                    </a> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link icon-contact" href="#contact">Contact
+                        <div class="border-effect"></div>
+                    </a>
+                </li>
+                <button class="btn item-dark-reader">
+                    <i class="bi bi-moon icon-moon" v-if="this.dark == false"></i>
+                    <i class="bi bi-brightness-high icon-light" v-else-if="this.dark == true"></i>
+                </button>
+               
+            </ul>
+        </div>
+        
   </nav>
 </template>
 
 <script>
-
+import { useDark, useToggle } from "@vueuse/core";
   export default {
-      name: 'navbar',
-      mounted(){
-        this.particles
-      },   
-      methods: {
-        particles(){
-            const hdr = document.querySelector('.header')
-            console.log(hdr);
-            const hero = document.querySelector('#about')
-            console.log(hero);
+    name: "Navbar",
+    data(){
+      return {
+        dark: '',
+      }
+    },
+    mounted(){
+      this.darkMod();
+    },
+    methods: {
+      darkMod(){
+        const isDark = useDark();
+        const toggleDark = useToggle(isDark)
+        this.dark = isDark
+
+        console.log(this.dark);
+
+        const btnDkMod = document.querySelector('.item-dark-reader')
+        btnDkMod.addEventListener('click', function(){   
+         toggleDark()
+        })
+      },
+      
+    }
     
-            window.addEventListener('scroll', () => { 
-              const { scrollTop, scrollHeight ,clientHeight} = document.documentElement;
-              const topElementToTopViewport = hero.getBoundingClientRect().top
-              console.log(topElementToTopViewport);
-              if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight >= -120){
-                hdr.classList.add('bg');
-              }
-            })
-        }
-      }, 
-}
+  }
 </script>
 
 <style lang="scss" scoped>
-.header {
+nav{
   position: fixed;
   padding: 0;
   top: auto;
   z-index: 2;
   width: 100%;
   overflow: hidden;
+  backdrop-filter: contrast(0.5);
   height: 50px;
-
-    .menu{
+  .navbar-brand{ color: #C1FF72; }
+  #navbarNav{
     width: 100%;
-    justify-content: right;
     ul{
-      width: 50%;
-      display: flex;
-      justify-content: space-around;
-      float: right;
-    }
-    @media (max-width: 991px){
-      height: 100%;
-      ul{
-        width: 100%;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-        li{
-          a{color: #485665;}
+      justify-content: center;
+      align-items: center;
+      li{
+        a{ color: #C1FF72; }
+        a i { font-size: 20px;}
+        &:hover{
+          .border-effect{
+            margin: auto;
+            border-bottom: 1px solid #C1FF72;
+            animation: borderEffectOnHover 1s ease-in-out;
+          }
+          @keyframes borderEffectOnHover {
+            from{
+              width: 0%;
+            }
+            to{
+              width: 100%;
+            }
+          }
         }
       }
+      .item-dark-reader{
+        color: #C1FF72;
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+      }            
+      // .icon-home, .icon-services, .icon-contact{
+      //   display: none;
+      // }
     }
-    
   }
-    .offcanvas-end.hidden{
-      transform: translateX(100%);
-      transition: transform .3s ease-in-out;
-      visibility: hidden;
-    }
-    .name,
-    .nav-item a {
-       display: inline-block;
-       color: #C1FF72;
-       font-size: 24px;
-       line-height: 42px;
-       font-smoothing: antialiased;
-    }
-    .name {
-       font-weight: bold;
-    }
-    .nav-item a {
-       float: right;
-    }
-    &.bg {
-       backdrop-filter: blur(100px);
-    }
-
-    .menu-contact{
-      display: none;
-      justify-content: right;
-      ul{
-        display: flex;
-        justify-content: space-around;
-        float: right;
-        .nav-item a i{
-          font-size: 40px;
-        }
-      }
-    }
- }
+}
 </style>

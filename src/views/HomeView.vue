@@ -29,32 +29,8 @@ import Banner from '../components/Banner.vue'
     name: 'home',
     components: { NavbarVue, Banner ,About, FooterVue, EducationVue, WebProjectsVue },
     mounted(){
-      this.animateTxt(),
-      this.showTxt()
     },
     methods: {
-      animateTxt(){
-        const txt = document.getElementById("animate_text");
-
-        const splitTxt = txt.innerText.split("");
-  
-  
-        txt.innerText = "";
-        let i = 0;
-        setInterval(function () {
-          addLetters();
-        }, 100);
-        function addLetters() {
-          if (i < splitTxt.length) {
-            txt.innerHTML += splitTxt[i];
-            i++;
-          }
-        }
-      },
-      showTxt(){
-        const txt = document.querySelector('.HS-link')
-        txt.classList.add('show')
-      }
     }
   }
 </script>
