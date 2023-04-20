@@ -93,10 +93,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 #about{
-  padding-top: 100px;
+  padding-top: 60px;
   @media (min-width: 300px) and (max-width: 1025px) {
     padding-top: 50px;
   }
@@ -198,11 +198,11 @@ export default {
         height: 100%;
         position: absolute;
         width: 100%;
-        background: #AF6EEF;            
+        background: #778DFB;            
         border-radius: 15px;
         z-index: -1;
-        top: 20px;          
-        left: 25px;
+        top: 10px;          
+        left: 10px;
         @media (max-width: 1024px){
           top: -6px;              
           left: 0;

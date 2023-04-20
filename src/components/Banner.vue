@@ -5,7 +5,7 @@
         </div>
 
         <div class="row home-title">
-            <img class="profil-pic" src="../assets/profil-pic.svg" alt="">
+            <img class="profil-pic" src="../assets/ultrapic2.svg" alt="">
             
             <h1 id="animate_text" class="">Développeur web Junior</h1>
 
@@ -26,7 +26,7 @@
     export default {
         name: 'Banner',
         mounted(){
-            this.animateTxt
+            this.animateTxt()
         },
         methods: {
             animateTxt(){

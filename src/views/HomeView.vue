@@ -13,7 +13,8 @@
   <!--Education Container-->
   <EducationVue />
   <!--Web Projects Container-->
-  <WebProjectsVue />
+  <Portfolio />
+
   <!--Footer-->
   <FooterVue />
 </template>
@@ -22,18 +23,14 @@
 import NavbarVue from '../components/Navbar.vue';
 import About from '../components/About.vue';
 import EducationVue from '../components/Education.vue';
-import WebProjectsVue from '../components/WebProjects.vue'
 import FooterVue from '../components/Footer.vue';
 import Banner from '../components/Banner.vue'
+import Portfolio from '../components/Portfolio.vue'
   export default {
     name: 'home',
-    components: { NavbarVue, Banner ,About, FooterVue, EducationVue, WebProjectsVue },
-    mounted(){
-    },
-    methods: {
-    }
+    components: { NavbarVue, Banner ,About, FooterVue, EducationVue, Portfolio },
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 </style>

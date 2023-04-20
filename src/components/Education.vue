@@ -105,7 +105,7 @@ export default {
             }
         }
         .timeline-design{
-          align-self: flex-end;
+          display: grid;
           .dl-cv{
             margin: 20px;
             .title{ color: #215B7D; }

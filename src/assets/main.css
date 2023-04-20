@@ -1,4 +1,24 @@
 @import './base.css';
+.dark{
+  color-scheme: dark;
+  --color-background: #16171d; /* it's better to use a dark grey color instead of pure black */
+}
+
+.dark .app{
+  color: #adb5bd;
+}
+/* 
+.dark a, .nav-link{
+  color: #adb5bd;
+}
+
+.dark button.btn.item-dark-reader i{
+  color: #0085A6;
+}
+
+.dark .banner-ctr .design-bckgrd::before{
+  background-color: ghostwhite;
+} */
 
 #app {
   font-weight: normal;

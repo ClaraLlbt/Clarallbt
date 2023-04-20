@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Clara Laliberté</a>
+  <nav id="nav" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><img src="../assets/Logo-Kala-Dev.svg" alt=""></a>
         
         <div class="" id="navbarNav">
             <ul class="navbar-nav">
@@ -55,8 +55,10 @@ import { useDark, useToggle } from "@vueuse/core";
     },
     mounted(){
       this.darkMod();
+      this.navbar()
     },
     methods: {
+      //Darkmod function 
       darkMod(){
         const isDark = useDark();
         const toggleDark = useToggle(isDark)
@@ -69,6 +71,19 @@ import { useDark, useToggle } from "@vueuse/core";
          toggleDark()
         })
       },
+      navbar(){
+        const doc = document.documentElement
+        console.log(doc);
+        const navbar = document.querySelector('#nav')
+
+        window.addEventListener('scroll', () => { 
+            const { scrollTop, scrollHeight ,clientHeight} = document.documentElement;
+            const topElementToTopViewport = doc.getBoundingClientRect().top
+            if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.30){
+              navbar.classList.add('bg')
+            }
+        });
+      }
       
     }
     
@@ -83,9 +98,15 @@ nav{
   z-index: 2;
   width: 100%;
   overflow: hidden;
-  backdrop-filter: contrast(0.5);
   height: 50px;
-  .navbar-brand{ color: #C1FF72; }
+  .navbar-brand{ 
+    color: #C1FF72;
+    position: absolute;
+    width: 25%;
+    img{
+      width: 50%;
+    }
+  }
   #navbarNav{
     width: 100%;
     ul{
@@ -121,5 +142,9 @@ nav{
       // }
     }
   }
+}
+
+.bg{
+  backdrop-filter: contrast(0.5);
 }
 </style>
