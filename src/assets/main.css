@@ -20,6 +20,12 @@
   background-color: ghostwhite;
 } */
 
+/*Fonts*/
+@font-face {
+	font-family: 'Amsterdam Four_ttf';
+	src: url('./fonts/Amsterdam\ Four_ttf\ 400.ttf') format(‘truetype’)
+}
+
 #app {
   font-weight: normal;
   color: #485665;

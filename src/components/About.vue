@@ -96,7 +96,7 @@ export default {
 <style lang="scss">
 
 #about{
-  padding-top: 60px;
+  padding: 60px 0;
   @media (min-width: 300px) and (max-width: 1025px) {
     padding-top: 50px;
   }

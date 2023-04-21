@@ -1,15 +1,15 @@
 <template>
-  <div id="education" class="container-fluid">
+  <div id="education" class="container">
     <div class="row education">
-      <div class="col-md-6 img-education">          
-        <div class="img"></div>
+      <div class="col-md-5 logo-education">          
+        <img src="../assets/logo_educatioN.svg" alt="">
       </div>
-      <div class="col-md-6 timeline-design">
+      <div class="col-md-7 timeline-design">
         <div class="row dl-cv">
           <h3 class="col-12 col-md-4 title">Mes diplômes</h3> 
           <div class="col-12 col-md-6 btn-dl-cv">
             <a href="/ClaraLaliberT/lib/web/CV_LALIBERTE_CLARA.pdf" download>                  
-              <button type="button" class="btn btn-light"><i class="bi bi-file-pdf"></i> Télécharger mon CV</button>
+              <button type="button" class="btn"><i class="bi bi-file-pdf"></i> Télécharger mon CV</button>
             </a>
           </div>
         </div>
@@ -90,27 +90,40 @@ export default {
 
 <style lang="scss" scoped>
 #education{
+  background: #2C0437;
+  overflow: hidden;
+  border-radius: 25px;
+  width: 80%;
+  .logo-education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     .education{
         height: 100%;
         contain: content;
-        padding-top: 60px;
         overflow: hidden;
-        .img-education{
-            height: 100%;
-            padding: 0;
-            .img{
-                height: 555px;
-                background-image: url(../assets/images/educationcomputer.jpg);
-                background-position: center;
-            }
-        }
         .timeline-design{
           display: grid;
           .dl-cv{
-            margin: 20px;
-            .title{ color: #215B7D; }
+            margin: 15px 0;
+            .title{ 
+              color: #C3F672;
+              font-family: Amsterdam Four_ttf;
+              font-size: 30px; }
             .btn-dl-cv{
               text-align: end;
+              a .btn{
+                padding: 15px;
+                color: #C3F672;
+                border: 1px #C3F672 solid;
+                box-shadow: 2px 1px 4px #C3F672;
+               
+              }
+              a .btn:hover{
+                box-shadow: 2px 1px 20px #C3F672;
+               
+              }
             }
             @media (max-width: 767px) {
               .title , .btn-dl-cv{
@@ -169,17 +182,17 @@ export default {
             }
             .cbp_tmtimeline > li .cbp_tmtime span:first-child {
               font-size: 0.9em;
-              color: #215B7D;
+              color: #C3F672;
             }
             .cbp_tmtimeline > li .cbp_tmtime span:last-child {
 	            font-size: 2.9em;
-	            color: #215B7D;
+	            color: #4653E6;
             }
 
             /* Right content */
             .cbp_tmtimeline > li .cbp_tmlabel {
               margin: 0 0 15px 25%;
-              background: #215B7D;
+              background: #4653E6;
               color: #fff;
               padding: 10px;
               font-size: 1.2em;
@@ -202,7 +215,7 @@ export default {
               width: 0;
               position: absolute;
               pointer-events: none;
-              border-right-color: #215B7D;
+              border-right-color: #4653E6;
               border-width: 10px;
               top: 10px;
             }
@@ -221,12 +234,11 @@ export default {
               -webkit-font-smoothing: antialiased;
               position: absolute;
               color: #fff;
-              background: #46a4da;
+              background: #4653E6;
               border-radius: 50%;
-              box-shadow: 0 0 0 8px #afdcf8;
               text-align: center;
               left: 20%;
-              top: 0;
+              top: -1px;
               margin: 0 0 0 -25px;
               
             }
