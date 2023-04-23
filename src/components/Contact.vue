@@ -1,44 +1,157 @@
 <template>
-    <div class="container-fluid contact-ctr">
+    <div id="contact" class="container-fluid contact-ctr">
         <div class="row">
-            <div class="col envlp">
-                <div class="letter-image">
-	<div class="animated-mail">
-		<div class="back-fold"></div>
-		<div class="letter">
-			<div class="letter-border"></div>
-			<div class="letter-title"></div>
-			<div class="letter-context"></div>
-			<div class="letter-stamp">
-				<div class="letter-stamp-inner"></div>
+            <div class="col contact">
+				<div class="span-txt">
+                <h2>Contactez-moi !</h2>
+                <span class="span-1">Vous souhaitez discuter de mes motivations ? Je vous invite à me contacter. Vous pouvez télécharger mon cv ou utiliser le formulaire.</span>
+                <div class="col-12 btn-dl-cv">
+                    <a href="/ClaraLaliberT/lib/web/CV_LALIBERTE_CLARA.pdf" download="">
+                        <button type="button" class="btn"><i class="bi bi-file-pdf"></i> Télécharger mon CV</button>
+                    </a>
+                </div>
+                <span class="span-2">A Bientôt !</span>
+           		</div>
+				   <div class="envlp">
+					<div class="col-lg-12 letter-image">
+					<div class="animated-mail">
+						<div class="back-fold"></div>
+						<div class="letter">
+							<div class="letter-border"></div>
+							<div class="letter-title"></div>
+							<div class="letter-context"></div>
+							<div class="letter-stamp">
+								<div class="letter-stamp-inner"></div>
+							</div>
+		
+						</div>
+		
+						<div class="top-fold"></div>
+		
+						<div class="body"></div>
+		
+						<div class="left-fold"></div>
+	
+					</div>
+					<div class="shadow"></div>
+				</div>
+				</div>
 			</div>
+			<div class="col form">
+				<form id="form" method="POST">
+                    <h3>Formulaire de contact</h3>
+                    <div>
+                        <label for="reply_to" class="form-label">Email:</label>
+                        <input  v-model="email" type="email" class="form-control" id="reply_to" name="reply_to" placeholder="Laissez moi votre Email" aria-describedby="emailHelp" required>
+                    </div>
+                    <div>
+                        <label for="message" class="form-label">Votre message:</label>
+                        <textarea v-model="message" class="form-control" id="message" name="message" rows="3" placeholder="Je serais ravie de prendre contact avec vous..." required></textarea>
+                    </div>
+                    <div class="button" >
+                        <button id="sendBtn" @click="sendEmail()" type="submit" value="Send Email" class="btn">Envoyer</button>
+                    </div>
+                </form>
+			</div>
+        
 		</div>
-		<div class="top-fold"></div>
-		<div class="body"></div>
-		<div class="left-fold"></div>
-	</div>
-	<div class="shadow"></div>
-</div>
-            </div>
-            <div class="col"></div>
-        </div>
     </div>
-
+	<Footer />
 </template>
 
 <script>
+import emailjs from "emailjs-com"
+import Footer from "./Footer.vue"
+export default {
+        name: 'Contact',
+		components: {Footer},
+        data(){
+            return{
+                email: '',
+                message: '',
+            }
+        },
+        mounted(){
+			this.displayEnv()
+        },
+        methods: {
+			displayEnv() {
+				const contactCtr = document.querySelector('.contact-ctr')
+        		const letterImg = document.querySelector('.letter-image')
+
+        window.addEventListener('scroll', () => { 
+            const { scrollTop, scrollHeight ,clientHeight} = document.documentElement;
+            const topElementToTopViewport = contactCtr.getBoundingClientRect().top
+            if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.30){
+				letterImg.classList.add('display')
+            }
+        });
+			},
+            sendEmail() {
+                const btn = document.querySelector('#sendBtn');
+                const messArea = document.querySelector('#message');
+                const emailArea = document.querySelector('#reply_to');
+                const form = document.getElementById('form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    btn.innerText = "En cours..."
+                    const serviceID = 'service_696tmpa';
+                    const templateID = 'template_bhiwqld';
+                    const userId = 'OkYb3_3x2XbgyN8aT';
+   
+                    emailjs.sendForm(serviceID, templateID, this ,userId, {
+                        email: this.email,
+                        message: this.message
+                    }) .then((res) => {
+                        btn.innerText = 'Email Envoyé';
+                        document.location.href = "/ClaraLaliberT/";
+                    
+                    }) 
+                    .catch ((err) => {
+                        btn.innerText = 'Une erreur est survenue';
+                    })
+                });  
+            }
+        }
+}
 
 </script>
 
 <style lang="scss">
 .contact-ctr{
     height: 100vh;
+	background: #380541;
     .row{
         height: 100%;
-        .envlp{
-            .letter-image {
+        .contact{
+			align-self: center;
+    		text-align: center;
+			margin-bottom: 30px;
+			.span-txt{
+				color: #C3F672;
+				h2{ 
+					font-family: 'Amsterdam Four_ttf';
+					font-size: 40px;
+					margin-bottom: 40px;
+				}
+				.btn-dl-cv{
+					margin: 15px 0;
+              		a .btn{
+                	padding: 15px;
+                	color: #C3F672;
+                	border: 1px #C3F672 solid;
+                	box-shadow: 2px 1px 4px #C3F672;
+              }
+              a .btn:hover{
+                box-shadow: 2px 1px 20px #C3F672;
+               
+              }
+            }
+			}
+			.envlp{
+				.letter-image {
 	position: absolute;
-	top: 50%;
+	top: 100px;
 	left: 50%;
 	width: 200px;
 	height: 200px;
@@ -173,7 +286,7 @@
 	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
 }
 
-	.letter-image:hover {
+	.letter-image.display {
 		.animated-mail {
 			transform: translateY(50px);
 			-webkit-transform: translateY(50px);
@@ -198,7 +311,36 @@
 			width: 250px;
 		}
 	}
-        }
+			}
+		}
+		.form{
+			display: flex;
+    		justify-content: center;
+    		align-items: flex-end;
+			form{
+				width: 100%;
+            	border-radius: 10px;
+            	padding: 20px;
+            	color: #C3F672;
+				border: 1px solid #C3F672;
+    			box-shadow: 1px 1px 4px #C3F672;
+				margin-bottom: 65px;
+				h3{
+					font-family: 'Amsterdam Four_ttf';
+					font-size: 40px;
+					margin-bottom: 40px;
+				}
+            	.button{
+                	text-align: center;
+                	button{
+						border: 1px solid #C3F672;
+    					box-shadow: 1px 1px 4px #C3F672;
+						color: white;
+                    	margin: 10px;
+                	}
+            	}
+        	}
+		}
     }
 }
 

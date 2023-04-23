@@ -13,18 +13,18 @@
                     </a> -->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-services" href="#services">Parcours
+                    <a class="nav-link link-services" href="#education">Parcours
                         <div class="border-effect"></div>
                     </a>
-                    <!-- <a class="nav-link icon-services" href="#services"><i class="bi bi-gear-wide-connected"></i>
+                    <!-- <a class="nav-link icon-services" href="#education"><i class="bi bi-gear-wide-connected"></i>
                         <div class="border-effect"></div>
                     </a> -->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-contact" href="#contact">Portfolio
+                    <a class="nav-link link-contact" href="#portfolio">Portfolio
                         <div class="border-effect"></div>
                     </a>
-                    <!-- <a class="nav-link icon-contact" href="#contact"><i class="bi bi-envelope-at"></i>
+                    <!-- <a class="nav-link icon-contact" href="#portfolio"><i class="bi bi-envelope-at"></i>
                         <div class="border-effect"></div>
                     </a> -->
                 </li>

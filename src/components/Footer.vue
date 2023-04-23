@@ -3,7 +3,7 @@
         <div class="row networks-icons"> 
             <div class="col-md-2 icons">
                 <div class="col-md-2 linked"><a href="https://www.linkedin.com/in/chltc/" aria-label="Learn more about me on my LinkedIn profile"><i class="bi bi-linkedin"></i></a></div>
-                <div class="col-md-2 instagram"><a href="https://www.instagram.com/kala__ikebana/" aria-label="Learn more about me on my Instagram profile"><i class="bi bi-instagram"></i></a></div>
+                <div class="col-md-2 instagram"><a href="https://www.instagram.com/kala__dev/" aria-label="Learn more about me on my Instagram profile"><i class="bi bi-instagram"></i></a></div>
             </div> 
         </div>
         <div class="row copyright">
@@ -51,8 +51,8 @@
 
 <style lang="scss" scoped>
 footer{
-    background: #73195D;
-    color:white;
+    background: #2C0437;
+    color: #C3F672;
     .row.networks-icons{
         justify-content: center;
         overflow: hidden;
@@ -65,11 +65,18 @@ footer{
             div{
                 text-align: center;
                 font-size: 25px;
-                margin: 10px;
+                margin: 5px 10px;
                 a{
-                    &:hover{
-                        background: none;
-                        color: white;
+                    color: #C3F672;
+                    i::before{ 
+                        border-radius: 7px;
+                        box-shadow: 1px 1px 4px #C3F672; 
+                    }
+                }
+                &:hover{
+                    i::before{ 
+                        border-radius: 7px;
+                        box-shadow: 1px 1px 7px #C3F672; 
                     }
                 }
             }
@@ -85,7 +92,8 @@ footer{
         p{
             padding: 10px;
             text-align: center;
-            border-top: 1px solid #D17C72;
+            border-top: 1px solid #C3F672;
+            margin-bottom: 0;
         }
     }
 

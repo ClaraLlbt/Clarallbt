@@ -1,4 +1,18 @@
 @import './base.css';
+
+.cards-grp::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+
+}
+.cards-grp::-webkit-scrollbar-button{ height: 8px;}
+.cards-grp::-webkit-scrollbar-thumb {
+  background-color: #C3F672; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+.cards-grp::-webkit-scrollbar-track{
+  height: 10px;
+}
+
 .dark{
   color-scheme: dark;
   --color-background: #16171d; /* it's better to use a dark grey color instead of pure black */
@@ -55,7 +69,7 @@ a,
 
 @media (max-width: 2000px){
   body { 
-    overflow:scroll !important;
+    overflow: auto;
     padding-right: 0px !important 
   }
 }

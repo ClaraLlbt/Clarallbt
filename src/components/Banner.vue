@@ -75,6 +75,7 @@
         h1{ 
             font-size: 60px;
             text-align: center;
+            font-family: 'Amsterdam Four_ttf';
         }
         .scroll-link{
             text-align: center;
