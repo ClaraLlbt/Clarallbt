@@ -1,5 +1,41 @@
 @import './base.css';
+ 
+/*Fonts Importation*/
+@font-face {
+	font-family: 'Amsterdam Four_ttf';
+	src: url('./fonts/Amsterdam\ Four_ttf\ 400.ttf') format(‘truetype’)
+}
 
+/* Darkmode Design */
+.dark{
+  color-scheme: dark;
+  --color-background: #16171d; /* it's better to use a dark grey color instead of pure black */
+}
+.dark #app{
+  color: #adb5bd;
+}
+.dark #about {
+  color: #485665;
+  }
+.dark #about .presentation .about-blc h2{ 
+  background: none;
+  color: #C3F672;
+  text-shadow: 2px 1px 2px black; }
+
+/* App Design */
+#app {
+  font-weight: normal;
+  color: #3f4a56;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+
+/* Design Portfolio Scrollbar */
 .cards-grp::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
 
@@ -12,60 +48,6 @@
 .cards-grp::-webkit-scrollbar-track{
   height: 10px;
 }
-
-.dark{
-  color-scheme: dark;
-  --color-background: #16171d; /* it's better to use a dark grey color instead of pure black */
-}
-
-.dark .app{
-  color: #adb5bd;
-}
-/* 
-.dark a, .nav-link{
-  color: #adb5bd;
-}
-
-.dark button.btn.item-dark-reader i{
-  color: #0085A6;
-}
-
-.dark .banner-ctr .design-bckgrd::before{
-  background-color: ghostwhite;
-} */
-
-/*Fonts*/
-@font-face {
-	font-family: 'Amsterdam Four_ttf';
-	src: url('./fonts/Amsterdam\ Four_ttf\ 400.ttf') format(‘truetype’)
-}
-
-#app {
-  font-weight: normal;
-  color: #485665;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: white;
-  transition: 0.4s;
-}
-/* a:hover{
-  background-color: #4653E6;
-    color: #AF6EEF;
-    border-radius: 25px;
-    padding: 5px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: #778DFB;
-    color: #AF6EEF;
-    border-radius: 25px;
-    padding: 5px;
-  }
-} */
 
 @media (max-width: 2000px){
   body { 

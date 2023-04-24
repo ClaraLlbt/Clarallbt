@@ -90,16 +90,18 @@ export default {
 
 <style lang="scss" scoped>
 #education{
-  background: #2C0437;
-  overflow: hidden;
-  border-radius: 25px;
   width: 80%;
+  padding: 51px 0px;
   .logo-education{
     display: flex;
     justify-content: center;
     align-items: center;
   }
     .education{
+      margin: auto;
+      background: #2C0437;
+      overflow: hidden;
+      border-radius: 25px;
         height: 100%;
         contain: content;
         overflow: hidden;

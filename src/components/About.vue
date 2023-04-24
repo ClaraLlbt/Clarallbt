@@ -2,6 +2,26 @@
     <div id="about" class="container-fluid">
 
         <div class="row presentation">
+          <div class="col-11 col-md-12 col-lg-4 about-blc">
+                <div class="bckgrd-color"></div>
+                <div class="p">
+                    <h2>Welcom !</h2>
+                    <p class="about-me">Développeur Web Junior, basée à Boulogne-sur-mer et récemment diplomée, 
+                      je suis à la recherche d'expériences professionnelles riches et motivantes. 
+                      Artistique et manuelle, je suis passionnée par le dessin et la création. 
+                      Geek, j'aime allier les nouvelles technologies à l'art. C'est pourquoi je cherche à évoluer dans le domaine du développement web 
+                      afin de pouvoir mettre mes nouvelles compétences à profit dans un environnement en adéquation avec qui je suis.</p>
+                      <div class="row softskills">
+                        <h3>Mes qualités</h3>
+                        <p>&#187 L'ecoute</p>
+                        <p>&#187 Rigueur et organisation </p>
+                        <p>&#187 Un sens artistique dans chaque projet</p>
+                        <p>&#187 La sécurité et l'accessibilité</p>
+                        <p>&#187 L'auto-évaluation</p>
+                      </div>
+                </div>
+
+            </div>
 
             <div class="col-11 col-md-12 col-lg-6" id="skills">
                 <div class="row development bloc-1">
@@ -43,22 +63,11 @@
                         <i class="bi bi-pc-display"></i>
                      </div>
                     <div class="col-md-9 dev-skills">
-                        <h4 id="icon3-color">Environnement de travail</h4>
+                        <h3 id="icon3-color">Environnement de travail</h3>
                         <p>IDE : Visual Studio Code</p>
                         <p>Workflow : Github</p>
                         <p>Bureautique : Google Drive/Microsoft Office/Libre Office</p>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-11 col-md-12 col-lg-4 about-blc">
-                <div class="bckgrd-color"></div>
-                <div class="p">
-                    <p>Je viens d'obtenir mon diplôme. Je suis à la recherche d'une expérience professionnelle riche et motivante.
-                    Je souhaiterais me tourner vers l'alternance dans le but de parfaire mes compétences et acquérir de nouveaux savoir. 
-                    Artistique et manuelle, je suis passionnée par le dessin et la création.Geek, j’aime allier les nouvelles technologies à l'art. 
-                    C’est pourquoi je cherche à évoluer dans le domaine du développement web afin de pouvoir mettre mes nouvelles compétences à profit dans 
-                    un environnement de travail en adéquation avec qui je suis.</p>
                 </div>
             </div>
         </div>
@@ -96,7 +105,7 @@ export default {
 <style lang="scss">
 
 #about{
-  padding: 60px 0;
+  padding: 100px 0;
   @media (min-width: 300px) and (max-width: 1025px) {
     padding-top: 50px;
   }
@@ -108,11 +117,65 @@ export default {
     display: flex;
     flex-direction: column-reverse;
   }
+  .about-blc{
+      border: 1px dotted #C3F672;
+      border-radius: 15px;
+      margin: auto;
+      background: white;
+      @media (max-width: 1024px){
+          margin-bottom: 50px;
+        }
+      .bckgrd-color{
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        background: #778DFB;            
+        border-radius: 15px;
+        z-index: -1;
+        top: 10px;          
+        left: 10px;
+        @media (max-width: 1024px){
+          top: -6px;              
+          left: 0;
+        }
+      }
+      h2{
+        font-family: Amsterdam Four_ttf;
+        text-align: center;
+        font-weight: 600;
+        font-size: xxx-large;
+        max-width: fit-content;
+        background: white;
+        padding: 10px;
+        margin: auto;
+        position: relative;
+        top: -40px;
+      }
+      .about-me{
+        text-align: justify;
+        padding: 0px 10px;
+        margin: 0;
+      }
+      .row.softskills{
+        padding: 10px;
+        h3{ 
+          font-family: 'Amsterdam';
+          font-weight: bold;
+          font-size: large;
+          padding: 15px;
+        }
+        p{
+          padding: 0px 15px;
+          margin: 0;
+        }
+      }
+    }
     #skills{
       overflow: hidden;
       margin: auto;
-      
-      .development{
+      h3{ font-size: 25px;}
+      h4{font-size: large;}
+      .development{  
         #icon1-color {color: #396CF1;}
           #icon2-color {
             color: #f89b3b;
@@ -136,13 +199,11 @@ export default {
           background: #F8F8F8;
           border-radius: 10px;
           align-self: center;
-          h5,h4 {
-          font-weight: bold;
-          }
+          
         }
         p {
           margin-bottom: 0;
-          font-weight: bold;
+          font-weight: 600;
           @media (max-width: 776px){
             overflow-wrap: break-word;
             font-size: 12px;
@@ -184,35 +245,6 @@ export default {
 
       @media (max-width: 425px){
         padding-bottom: 50px;
-      }
-    }
-    .about-blc{
-      border: 1px solid lightgray;
-      border-radius: 15px;
-      margin: auto;
-      background: white;
-      @media (max-width: 1024px){
-          margin-bottom: 50px;
-        }
-      .bckgrd-color{
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        background: #778DFB;            
-        border-radius: 15px;
-        z-index: -1;
-        top: 10px;          
-        left: 10px;
-        @media (max-width: 1024px){
-          top: -6px;              
-          left: 0;
-        }
-      }
-      p{
-        font-size: 17px;
-        text-align: justify;
-        padding: 26px;
-        font-weight: bold;
       }
     }
   }

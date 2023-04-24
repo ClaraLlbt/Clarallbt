@@ -2,7 +2,7 @@
     <div id="portfolio" class="container portfolio-ctr">
         <div class="row portfolio">
             <h3>Portfolio</h3>
-            <div class="col-lg-6 cards-grp">
+            <div class="col-lg-5 cards-grp">
                 <!--Card 6-->           
                 <div class="card">
                      <img src="../assets/images/Dito.png" class="card-img-top" alt="...">
@@ -14,10 +14,10 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                         <div class="row langages">
-                            <div class="col-lg-2 expressjs">Express JS </div>
-                            <div class="col-lg-2 vueJs">Vue</div>
-                            <div class="col-lg-3 html">HTML 5</div>
-                            <div class="col-lg-2 css">CSS 3</div>
+                            <div class="col-lg-3 lgs expressjs">Express JS </div>
+                            <div class="col-lg-3 lgs vueJs">Vue</div>
+                            <div class="col-lg-3 lgs html">HTML 5</div>
+                            <div class="col-lg-3 lgs css">CSS 3</div>
                         </div>
                     </div>
                 </div>
@@ -31,10 +31,10 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                         <div class="row langages">
-                            <div class="col-lg-2 expressjs">Express JS</div>
-                            <div class="col-lg-2 vueJs">Vue</div>
-                            <div class="col-lg-3 html">HTML 5</div>
-                            <div class="col-lg-2 css">CSS 3</div>
+                            <div class="col-lg-3 lgs expressjs">Express JS</div>
+                            <div class="col-lg-3 lgs vueJs">Vue</div>
+                            <div class="col-lg-3 lgs html">HTML 5</div>
+                            <div class="col-lg-3 lgs css">CSS 3</div>
                         </div>
                     </div>
                 </div>
@@ -48,9 +48,9 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                         <div class="row langages">
-                            <div class="col-lg-2 expressjs">Express JS </div>
-                            <div class="col-lg-3 html">HTML 5</div>
-                            <div class="col-lg-2 css">CSS 3</div>
+                            <div class="col-lg-3 lgs expressjs">Express JS </div>
+                            <div class="col-lg-3 lgs html">HTML 5</div>
+                            <div class="col-lg-3 lgs css">CSS 3</div>
                         </div>
                     </div>
                 </div>
@@ -64,10 +64,10 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                         <div class="row langages">
-                            <div class="col-lg-3 html">HTML 5</div>
-                            <div class="col-lg-3 javascript">Javascript</div>
-                            <div class="col-lg-2 css">CSS 3</div>
-                            <div class="col-lg-3 bootstrap">Bootstrap</div>
+                            <div class="col-lg-3 lgs javascript">Javascript</div>
+                            <div class="col-lg-3 lgs html">HTML 5</div>
+                            <div class="col-lg-3 lgs css">CSS 3</div>
+                            <div class="col-lg-3 lgs bootstrap">Bootstrap</div>
                         </div>
                     </div>
                 </div>
@@ -81,8 +81,8 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                         <div class="row langages">
-                            <div class="col-lg-3 html">HTML 5</div>
-                            <div class="col-lg-2 css">CSS 3</div>
+                            <div class="col-lg-3 lgs html">HTML 5</div>
+                            <div class="col-lg-3 lgs css">CSS 3</div>
                         </div>
                     </div>
                 </div>
@@ -96,8 +96,8 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
                         <div class="row langages">
-                            <div class="col-lg-3 html">HTML 5</div>
-                            <div class="col-lg-2 css">CSS 3</div>
+                            <div class="col-lg-3 lgs html">HTML 5</div>
+                            <div class="col-lg-3 lgs css">CSS 3</div>
                         </div>
                     </div>
                 </div>
@@ -106,21 +106,17 @@
                
             </div>
             <div class="col-lg-6 portfolio-presentation">
-                <div class="row">
-                    <div class="col-lg-2 fullstack">Backend</div>
-                    <div class="col-lg-2 fullstack">Frontend</div>
-                    <div class="col-lg-2 fullstack">Databases</div>
-                </div>
                <p>Au cours de ma formation de développeur web, j'ai acquis de nombreuses compétences. 
-                J'ai eu l'occasion de travailler à la fois sur des interfaces frontend et backend, mais aussi sur la création 
+                J'ai eu l'occasion de travailler à la fois sur des interfaces front-end et back-end, mais aussi sur la création 
                 et l'intégration de bases de données.
-                J'ai donc implémenté des interfaces responsives en intégrant du contenu conformément à une maquette
-                et en utilisant de bonnes pratiques de développement web pour assurer l'accessibilité d'un site 
-                comme l'optimisation du référécement naturel ou le temps de chargement du site. J'ai appris à tester une application 
-                et à gérer et valider des événements Javascript en interraction avec une API; 
-                à implémenter des modeles logiques de données conformément à la réglementation et à stocker des données de manière sécurisée 
-                sur des bases de données Cloud ou SQL; à créer une application de A à Z avec différents frameworks selon la nécessité. 
                 </p>
+                <p>&#187 Implémentation d'interfaces responsives en suivant une charte graphique et en intégrant du contenu conformément à une maquette</p>
+                <p>&#187 Utiliser de bonnes pratiques de développement pour assurer l'accessibilité d'un site</p>
+                <p>&#187 Test d'applications / Création et gestion d'événements Javascript</p>
+                <p>&#187 Création et gestion d'API sécurisée</p>
+                <p>&#187 Implémentation de modeles logiques de données conformement à la réglementation et stockage des données de manière sécurisée.</p>
+                <p>&#187 Création et intégration de bases de données CLOUD et SQL</p>
+                <p>&#187 Utilisation de plusieurs Frameworks: AngularJs, VueJs, ...</p>
             </div>
         </div>
 
@@ -194,36 +190,33 @@
                 .card-body{
                     .langages{
                         font-size: x-small;
+                        .lgs{ 
+                            margin: 1px;}
                         .html{
                             color: white;
                             background: #F75421;
                             opacity: 50%;
-                            margin: 5px;
                             text-align: center;
                         }
                         .css{
                             color: white;
                             background: #2790C9;
                             opacity: 50%;
-                            margin: 5px;
                             text-align: center;
                         }
                         .bootstrap{
                             color: white;
                             background: #7532F9;
                             opacity: 50%;
-                            margin: 5px;
                             text-align: center;
                         }
                         .javascript{
                             background: #F3DF1D;
                             opacity: 50%;
-                            margin: 5px;
                             text-align: center;
                         }
                         .expressjs{
                             padding: 3px;
-                            margin: 5px;
                             text-align: center;
                             display: flex;
                             align-items: baseline;
@@ -234,7 +227,6 @@
                             opacity: 50%;
                             background: #3FB27F;
                             color: #32475B;
-                            margin: 5px;
                             text-align: center;
                         }
                     }
@@ -255,7 +247,7 @@
             }
             p{ 
                 text-align: center;
-                margin-top: 40px;
+                font-size: smaller;
                 text-align: justify;
                 font-weight: 600;
             }

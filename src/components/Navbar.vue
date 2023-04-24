@@ -5,7 +5,7 @@
         <div class="" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link link-home" href="#">A propos
+                    <a class="nav-link link-home" href="#about">A propos
                         <div class="border-effect"></div>
                     </a>
                     <!-- <a class="nav-link icon-home" href="#"><i class="bi bi-house-door-fill"></i>
