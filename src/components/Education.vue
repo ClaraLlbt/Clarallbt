@@ -92,6 +92,10 @@ export default {
 #education{
   width: 80%;
   padding: 51px 0px;
+  @media (max-width: 768px) {
+    padding: 0;
+    width: 90%;
+  }
   .logo-education{
     display: flex;
     justify-content: center;
@@ -130,6 +134,7 @@ export default {
             @media (max-width: 767px) {
               .title , .btn-dl-cv{
                 text-align: center;
+                margin: 30px 0;
               }
             }
           }

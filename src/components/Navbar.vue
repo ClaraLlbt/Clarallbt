@@ -1,6 +1,6 @@
 <template>
   <nav id="nav" class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="../assets/Logo-Kala-Dev.svg" alt=""></a>
+        <a class="navbar-brand" href="#home"><img src="../assets/Logo-Kala-Dev.svg" alt=""></a>
         
         <div class="" id="navbarNav">
             <ul class="navbar-nav">
@@ -103,6 +103,7 @@ nav{
     color: #C1FF72;
     position: absolute;
     width: 25%;
+    z-index: 2;
     img{
       width: 50%;
     }

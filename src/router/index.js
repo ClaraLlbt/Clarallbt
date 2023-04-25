@@ -9,16 +9,8 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
-    {
-      path: "/contact",
-      name: "contact",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/ContactView.vue"),
-    },
   ],
-  base: 'https://clarallbt.github.io/ClaraLaliberT/' 
+  base: 'https://clarallbt.github.io/Clarallbt/' 
 });
 
 export default router;

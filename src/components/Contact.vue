@@ -121,6 +121,9 @@ export default {
 .contact-ctr{
     height: 100vh;
 	background: #380541;
+	@media (max-width: 768px) {
+		height: 100%;
+            }
     .row{
         height: 100%;
         .contact{
@@ -133,6 +136,9 @@ export default {
 					font-family: 'Amsterdam Four_ttf';
 					font-size: 40px;
 					margin-bottom: 40px;
+					@media (max-width: 768px) {
+						margin: 40px auto;
+            		}
 				}
 				.btn-dl-cv{
 					margin: 15px 0;
@@ -159,6 +165,9 @@ export default {
 	-moz-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	cursor: pointer;
+	@media (max-width: 768px) {
+        position: relative;
+            }
 }
 
 .animated-mail {

@@ -142,6 +142,9 @@
             margin: auto;
             border-bottom: 1px solid #4653E6;
             padding: 50px 0;
+            @media (max-width: 768px) {
+                padding: 0 0 50px 0;
+            }
         }
         .cards-grp{
             height: 100vh;
@@ -152,10 +155,17 @@
             padding: 15px;
             background: #4653E6;
             border-radius: 10px;
+            @media (max-width: 768px) {
+                width: 80%;
+                margin: 10px auto;
+            }
             //General Cards Design
             .card{
                 width: 60%;
                 margin: 15px auto;
+                @media (max-width: 768px) {
+                width: 80%;
+                }   
                 i{
                     position: absolute;
                     font-size: xxx-large;
@@ -177,6 +187,9 @@
                     align-self: center;
                     position: absolute;
                     top: 20%;
+                    @media (max-width: 768px) {
+                        top: 10%;
+                    }
                     button{
                         border: none;
                         padding: 10px;
@@ -191,7 +204,11 @@
                     .langages{
                         font-size: x-small;
                         .lgs{ 
-                            margin: 1px;}
+                            margin: 1px;
+                            @media (max-width: 768px) {
+                                width: fit-content;
+                            }
+                        }
                         .html{
                             color: white;
                             background: #F75421;

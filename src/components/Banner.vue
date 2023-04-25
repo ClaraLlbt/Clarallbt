@@ -54,8 +54,10 @@
 <style lang="scss" scoped>
 #hdrBanner{
     max-width: 100%;
-    height: 100%;
+    height: 100vh;
     .banner img {
+        object-fit: cover;
+        height: 100vh;
         width: 100%;
         filter: blur(1px);
     }
@@ -106,15 +108,13 @@
         @media (max-width: 550px) {
             height: 100%;
             width: 100%;
-            display: grid;
-            align-content: space-evenly;
             top: 0;
             left: 0;
             margin: auto;
             h1, a{
                 text-align: center;
             }
-            h1{ font-size: 50px;}
+            h1{ font-size: 30px;}
             a{ 
                 left: 0;
                 font-size: 30px;

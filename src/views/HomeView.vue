@@ -1,12 +1,10 @@
 <template>
   <!--HEADER-->
-  <div id="home" class="home">
     <!--Navbar + Header Banner-->
     <NavbarVue />
 
     <Banner />
 
-  </div>
 
   <!--About Container-->
   <About/>

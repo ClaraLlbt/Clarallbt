@@ -107,15 +107,15 @@ export default {
 #about{
   padding: 100px 0;
   @media (min-width: 300px) and (max-width: 1025px) {
-    padding-top: 50px;
+    padding-top: 95px;
+    padding-bottom: 0;
   }
   .presentation{
     margin: auto;
     align-items: center;
     justify-content: center;
     @media (min-width: 300px) and (max-width: 1000px) {
-    display: flex;
-    flex-direction: column-reverse;
+    
   }
   .about-blc{
       border: 1px dotted #C3F672;
