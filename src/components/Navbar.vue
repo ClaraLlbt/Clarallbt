@@ -5,31 +5,31 @@
         <div class="" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link link-home" href="#about">A propos
+                    <a class="nav-link link-about" href="#about">A propos
                         <div class="border-effect"></div>
                     </a>
-                    <!-- <a class="nav-link icon-home" href="#"><i class="bi bi-house-door-fill"></i>
-                        <div class="border-effect"></div>
-                    </a> -->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-services" href="#education">Parcours
+                    <a class="nav-link icon-about" href="#"><i class="bi bi-house-door-fill"></i>
                         <div class="border-effect"></div>
                     </a>
-                    <!-- <a class="nav-link icon-services" href="#education"><i class="bi bi-gear-wide-connected"></i>
-                        <div class="border-effect"></div>
-                    </a> -->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-contact" href="#portfolio">Portfolio
+                    <a class="nav-link link-education" href="#education">Parcours
                         <div class="border-effect"></div>
                     </a>
-                    <!-- <a class="nav-link icon-contact" href="#portfolio"><i class="bi bi-envelope-at"></i>
+                    <a class="nav-link icon-education" href="#education"><i class="bi bi-gear-wide-connected"></i>
                         <div class="border-effect"></div>
-                    </a> -->
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link icon-contact" href="#contact">Contact
+                    <a class="nav-link link-portfolio" href="#portfolio">Portfolio
+                        <div class="border-effect"></div>
+                    </a>
+                    <a class="nav-link icon-portfolio" href="#portfolio"><i class="bi bi-envelope-at"></i>
+                        <div class="border-effect"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-contact" href="#contact">Contact
                         <div class="border-effect"></div>
                     </a>
                 </li>
@@ -55,6 +55,7 @@ import { useDark, useToggle } from "@vueuse/core";
     },
     mounted(){
       this.darkMod();
+      this.responsiveIcons();
       this.navbar()
     },
     methods: {
@@ -71,6 +72,24 @@ import { useDark, useToggle } from "@vueuse/core";
          toggleDark()
         })
       },
+      responsiveIcons(){
+            const iconAbout = document.querySelector('.icon-about')
+            const iconEducation = document.querySelector('.icon-education')
+            const iconPortfolio = document.querySelector('.icon-portfolio')
+            const iconContact = document.querySelector('.icon-contact')
+
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                /* La largeur minimum de l'affichage est 600 px inclus */
+                console.log("format mobile detecté")
+                iconAbout.classList.add('mbl')
+                iconEducation.classList.add('mbl')
+                iconPortfolio.classList.add('mbl')
+
+            } else {
+                console.log("format mobile non detecté")
+                /* L'affichage est inférieur à 600px de large */
+            }
+        },
       navbar(){
         const doc = document.documentElement
         console.log(doc);
@@ -98,14 +117,15 @@ nav{
   z-index: 2;
   width: 100%;
   overflow: hidden;
-  height: 50px;
+  height: 65px;
   .navbar-brand{ 
     color: #C1FF72;
     position: absolute;
     width: 25%;
     z-index: 2;
     img{
-      width: 50%;
+      width: 65%;
+      margin: 0 15px;
     }
   }
   #navbarNav{
@@ -138,14 +158,41 @@ nav{
         right: 20px;
         font-size: 20px;
       }            
-      // .icon-home, .icon-services, .icon-contact{
-      //   display: none;
-      // }
+      .icon-about, .icon-education, .icon-portfolio, .icon-contact{
+        display: none;
+      }
     }
   }
 }
-
 .bg{
   backdrop-filter: contrast(0.5);
+}
+
+// Mobile Version
+@media (max-width: 768px) {
+    nav{
+        padding: 5px 0px;
+        #navbarNav{
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                li{
+                    margin: 0 10px;
+                    font-size: 20px;
+                    
+                    .icon-about.mbl, .icon-education.mbl, .icon-portfolio.mbl,  .icon-contact.mbl{
+                        display: block;
+                    }
+                    .link-about , .link-portfolio , .link-education ,  .link-contact{
+                        display: none;
+                    }
+
+                }
+                
+            }
+        }
+    }
 }
 </style>
