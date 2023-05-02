@@ -16,7 +16,7 @@
                     <a class="nav-link link-education" href="#education">Parcours
                         <div class="border-effect"></div>
                     </a>
-                    <a class="nav-link icon-education" href="#education"><i class="bi bi-gear-wide-connected"></i>
+                    <a class="nav-link icon-education" href="#education"><i class="bi bi-mortarboard-fill"></i>
                         <div class="border-effect"></div>
                     </a>
                 </li>
@@ -24,12 +24,15 @@
                     <a class="nav-link link-portfolio" href="#portfolio">Portfolio
                         <div class="border-effect"></div>
                     </a>
-                    <a class="nav-link icon-portfolio" href="#portfolio"><i class="bi bi-envelope-at"></i>
+                    <a class="nav-link icon-portfolio" href="#portfolio"><i class="bi bi-file-earmark-code-fill"></i>
                         <div class="border-effect"></div>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link-contact" href="#contact">Contact
+                        <div class="border-effect"></div>
+                    </a>
+                    <a class="nav-link icon-contact" href="#contact"><i class="bi bi-envelope-fill"></i>
                         <div class="border-effect"></div>
                     </a>
                 </li>
@@ -84,6 +87,7 @@ import { useDark, useToggle } from "@vueuse/core";
                 iconAbout.classList.add('mbl')
                 iconEducation.classList.add('mbl')
                 iconPortfolio.classList.add('mbl')
+                iconContact.classList.add('mbl')
 
             } else {
                 console.log("format mobile non detecté")
@@ -124,7 +128,7 @@ nav{
     width: 25%;
     z-index: 2;
     img{
-      width: 65%;
+      width: 50%;
       margin: 0 15px;
     }
   }
@@ -171,7 +175,9 @@ nav{
 // Mobile Version
 @media (max-width: 768px) {
     nav{
-        padding: 5px 0px;
+        position: fixed;
+        bottom: 0;
+        .navbar-brand{ display: none;}
         #navbarNav{
             ul{
                 display: flex;
@@ -179,10 +185,9 @@ nav{
                 justify-content: center;
                 align-items: center;
                 li{
-                    margin: 0 10px;
+                    margin: auto;
                     font-size: 20px;
-                    
-                    .icon-about.mbl, .icon-education.mbl, .icon-portfolio.mbl,  .icon-contact.mbl{
+                    .icon-about.mbl, .icon-education.mbl, .icon-portfolio.mbl, .icon-contact.mbl{
                         display: block;
                     }
                     .link-about , .link-portfolio , .link-education ,  .link-contact{
@@ -190,9 +195,20 @@ nav{
                     }
 
                 }
+                .item-dark-reader{
+                  position: initial;
+                  font-size: 35px;
+                }
                 
             }
+            ul li:nth-child(3), li:nth-child(4){
+                      order: 1;
+                    }
         }
+    }
+    .bg{
+      background: #380541;
+      border-top: 1px solid #C1FF72;
     }
 }
 </style>
